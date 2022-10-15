@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>password hide and show in javascript</title>
+    </head>
+    <body style="background-color: tomato;">
+        <form action="#" style="width: 150px; margin: 200px auto; border: 2px solid white; background-color: gray; padding: 50px; border-radius: 10px;">
+            <b>Name</b>
+            <p></p>
+            <input type="text" />
+            <p></p>
+            <b>Password</b>
+            <p></p>
+            <input type="password" id="pass" />
+            <p></p>
+            <input type="checkbox" onclick="hideShowFun()" /> <b>Show Password</b>
+            <p></p>
+            <input type="Submit" value="Login" />
+        </form>
+
+        <script>
+            function hideShowFun() {
+                let mypass = document.getElementById("pass");
+
+                if (mypass.type == "password") {
+                    mypass.type = "text";
+                } else {
+                    mypass.type = "password";
+                }
+            }
+        </script>
+    </body>
+</html>
